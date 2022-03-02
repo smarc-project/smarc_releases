@@ -1,6 +1,7 @@
 - geographic_msgs
 - geodesy
 - geographic_info
+- cola2_msgs
 - smarc_msgs
 - imc_ros_bridge
 - sam_msgs
