@@ -4,6 +4,10 @@
 - smarc_msgs
 - imc_ros_bridge
 - sam_msgs
+- lolo_msgs
+- lolo_description
+- captain_interface
+- lolo_drivers
 - sam_description
 - tf_lat_lon
 - tf_convenience_topics
