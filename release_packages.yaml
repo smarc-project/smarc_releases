@@ -12,3 +12,7 @@
 - tf_lat_lon
 - tf_convenience_topics
 - sam_dead_reckoning
+- leak_alarm
+- smarc_keyboard_teleop
+- sss_viewer
+- message_joiner
