@@ -24,10 +24,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: '.'
-      - name: Setup environment
+      - name: Download packages
         run: |
-        #  sudo curl https://raw.githubusercontent.com/smarc-project/rosinstall/master/sources.list.d/smarc-${{ matrix.distro }}-latest.list -o /etc/apt/sources.list.d/smarc-latest.list
           sudo apt update
+          sudo apt install -y python3-vcstool
+          vcs import --recursive --w 1 < smarc_releases.rosinstall
+      - name: Setup environment
+        #sudo curl https://raw.githubusercontent.com/smarc-project/rosinstall/master/sources.list.d/smarc-${{ matrix.distro }}-latest.list -o /etc/apt/sources.list.d/smarc-latest.list     
+        run: |
           sudo curl https://raw.githubusercontent.com/smarc-project/rosinstall/master/rosdep/50-smarc-${{ matrix.distro }}.list -o /etc/ros/rosdep/sources.list.d/50-smarc.list  
           rosdep update
       - name: Install deps
