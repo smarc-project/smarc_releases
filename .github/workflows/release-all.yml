@@ -39,6 +39,7 @@ jobs:
           ls
           sudo apt install -y ${{ matrix.bloom }} fakeroot dpkg-dev debhelper zip
       - name: Build package
+        shell: bash
         run: |
           mkdir bloom-release-debs
           while read repo_line; do
