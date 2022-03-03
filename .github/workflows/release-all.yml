@@ -41,6 +41,7 @@ jobs:
       - name: Build package
         shell: bash
         run: |
+          which python3
           mkdir bloom-release-debs
           while read repo_line; do
             repo=$(echo $repo_line | cut -c3-)
