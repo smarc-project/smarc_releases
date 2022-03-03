@@ -49,6 +49,7 @@ jobs:
           while read repo_line; do
             repo=$(echo $repo_line | cut -c3-)
             echo "Doing ${repo}"
+            ls $repo
             pkgs_file="${repo}/release_packages.yaml"
             has_config=$(test -f "$pkgs_file")
             if $has_config; then
@@ -60,7 +61,7 @@ jobs:
               done < $pkgs_file
               cd $repo
             else
-              echo "Didn't find ${pkgs_file}!"
+              echo "Did not find ${pkgs_file}"
               pkgs=("${repo}")
             fi
             echo ${pkgs[*]}
