@@ -53,6 +53,43 @@ jobs:
             sudo dpkg -i ros-${{ matrix.distro }}-*.deb
             mv ros-${{ matrix.distro }}-*.deb bloom-release-debs
           done < release_packages.yaml
+          while read repo_line; do
+            repo=$(echo $repo_line | cut -c3-)
+            echo "Doing ${repo}"
+            pkgs_file="${repo}/release_packages.yaml"
+            has_config=$(test -f "$pkgs_file")
+            if $has_config; then
+              echo "Found ${pkgs_file}"
+              pkgs=()
+              while read line; do
+                echo $line
+                pkgs+=($(echo $line | cut -c3-))
+              done < $pkgs_file
+              cd $repo
+            else
+              echo "Didn't find ${pkgs_file}!"
+              pkgs=("${repo}")
+            fi
+            echo ${pkgs[*]}
+            for pkg in ${pkgs[*]}; do
+              echo "Doing ${pkg}"
+              cd $pkg
+              ls
+              rosdep install --from-path . --ignore-src --rosdistro ${{ matrix.distro }} -y
+              bloom-generate rosdebian --os-name ubuntu --os-version ${{ matrix.ubuntu }} --ros-distro ${{ matrix.distro }}
+              fakeroot debian/rules binary
+              cd ..
+              sudo dpkg -i ros-${{ matrix.distro }}-*.deb
+              if $has_config; then
+                mv ros-${{ matrix.distro }}-*.deb ../bloom-release-debs
+              else
+                mv ros-${{ matrix.distro }}-*.deb bloom-release-debs
+              fi
+            done
+            if $has_config; then
+              cd ..
+            fi
+          done < release_repos.yaml
           zip -j bloom-${{ matrix.distro }}-release-deb.zip bloom-release-debs/*
           ls
       - name: Upload binaries to release
