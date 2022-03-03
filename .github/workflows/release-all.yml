@@ -28,6 +28,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y python3-vcstool
+          pip3 install setuptools==45.2.0 --no-input
           vcs import --recursive --w 1 < smarc_releases.rosinstall
       - name: Setup environment
         #sudo curl https://raw.githubusercontent.com/smarc-project/rosinstall/master/sources.list.d/smarc-${{ matrix.distro }}-latest.list -o /etc/apt/sources.list.d/smarc-latest.list     
