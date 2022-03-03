@@ -41,18 +41,6 @@ jobs:
       - name: Build package
         run: |
           mkdir bloom-release-debs
-          while read line; do
-            pkg=$(echo $line | cut -c3-)
-            echo "Doing ${pkg}"
-            cd $pkg
-            ls
-            rosdep install --from-path . --ignore-src --rosdistro ${{ matrix.distro }} -y
-            bloom-generate rosdebian --os-name ubuntu --os-version ${{ matrix.ubuntu }} --ros-distro ${{ matrix.distro }}
-            fakeroot debian/rules binary
-            cd ..
-            sudo dpkg -i ros-${{ matrix.distro }}-*.deb
-            mv ros-${{ matrix.distro }}-*.deb bloom-release-debs
-          done < release_packages.yaml
           while read repo_line; do
             repo=$(echo $repo_line | cut -c3-)
             echo "Doing ${repo}"
