@@ -44,6 +44,7 @@ jobs:
         run: |
           which python3
           python3 -c "import setuptools; print(setuptools.__version__)"
+          ls
           mkdir bloom-release-debs
           while read repo_line; do
             repo=$(echo $repo_line | cut -c3-)
