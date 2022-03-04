@@ -6,3 +6,9 @@
 - lolo_common
 - smarc_navigation
 - smarc_utils
+- smarc_missions
+- stonefish_ros
+- smarc_stonefish_sims
+- roswasm_suite_native
+- lolo_webgui_native
+- sam_webgui_native
