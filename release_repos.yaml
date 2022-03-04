@@ -7,8 +7,9 @@
 - smarc_navigation
 - smarc_utils
 - smarc_missions
-- stonefish_ros
-- smarc_stonefish_sims
+- smarc_controllers
 - roswasm_suite_native
 - lolo_webgui_native
 - sam_webgui_native
+- stonefish_ros
+- smarc_stonefish_sims
