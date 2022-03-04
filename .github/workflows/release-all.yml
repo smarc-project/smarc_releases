@@ -51,7 +51,7 @@ jobs:
             echo "Doing ${repo}"
             ls $repo
             pkgs_file="${repo}/release_packages.yaml"
-            has_config=$(test -f "$pkgs_file")
+            has_config=$(test -f "$pkgs_file" && echo true || echo false)
             if $has_config; then
               echo "Found ${pkgs_file}"
               pkgs=()
