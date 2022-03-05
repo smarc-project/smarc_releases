@@ -8,8 +8,5 @@
 - git: {local-name: smarc_utils, uri: 'https://github.com/smarc-project/smarc_utils.git', version: noetic-devel}
 - git: {local-name: smarc_missions, uri: 'https://github.com/smarc-project/smarc_missions.git', version: noetic-devel}
 - git: {local-name: smarc_controllers, uri: 'https://github.com/smarc-project/smarc_controllers.git', version: noetic-devel}
-- git: {local-name: roswasm_suite_native, uri: 'https://github.com/smarc-project-native-gui/roswasm_suite_native.git', version: master}
-- git: {local-name: lolo_webgui_native, uri: 'https://github.com/smarc-project-native-gui/lolo_webgui_native.git', version: master}
-- git: {local-name: sam_webgui_native, uri: 'https://github.com/smarc-project-native-gui/sam_webgui_native.git', version: master}
 - git: {local-name: stonefish_ros, uri: 'https://github.com/smarc-project/stonefish_ros.git', version: noetic-devel}
 - git: {local-name: smarc_stonefish_sims, uri: 'https://github.com/smarc-project/smarc_stonefish_sims.git', version: noetic-devel}
