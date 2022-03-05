@@ -1,3 +1,8 @@
+- roswasm_suite
+- lolo_webgui
+- sam_webgui
 - roswasm_suite_native
 - lolo_webgui_native
 - sam_webgui_native
+- smarc_base
+- smarc_desktop
