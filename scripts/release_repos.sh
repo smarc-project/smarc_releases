@@ -46,4 +46,5 @@ while read repo_line; do
   fi
 done < $3
 zip -j bloom-${2}-release-deb.zip bloom-release-debs/*
+rm -rf bloom-release-debs
 ls
