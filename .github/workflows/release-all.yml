@@ -52,4 +52,24 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           body: "Debian release generated using bloom"
+      - name: Setups deps for EMSDK
+        run: |
+          sudo apt update
+          sudo apt install zip unzip
+      - uses: mymindstorm/setup-emsdk@v7      
+        with:
+          version: '2.0.7'
+      - name: Build WASM packages
+        shell: bash
+        run: |
+          scripts/release_repos.sh ${{ matrix.ubuntu }} ${{ matrix.distro }} release_repos_gui.yaml
+      - name: Upload WASM binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./bloom-${{ matrix.distro }}-release-deb.zip
+          asset_name: bloom-${{ matrix.distro }}-wasm-release-deb.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "Debian release generated using bloom"
 
