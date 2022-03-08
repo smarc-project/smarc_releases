@@ -11,7 +11,7 @@ while read repo_line; do
   repo=$(echo $repo_line | cut -c3-)
   echo "Doing ${repo}"
   ls $repo
-  pkgs_file="${repo}/${3}"
+  pkgs_file="${repo}/release_packages.yaml"
   has_config=$(test -f "$pkgs_file" && echo true || echo false)
   if $has_config; then
     echo "Found ${pkgs_file}"
@@ -44,6 +44,6 @@ while read repo_line; do
   if $has_config; then
     cd ..
   fi
-done < release_repos.yaml
+done < $3
 zip -j bloom-${2}-release-deb.zip bloom-release-debs/*
 ls
