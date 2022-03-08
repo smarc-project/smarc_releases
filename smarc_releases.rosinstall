@@ -16,5 +16,3 @@
 - git: {local-name: roswasm_suite_native, uri: 'https://github.com/smarc-project-native-gui/roswasm_suite_native.git', version: master}
 - git: {local-name: lolo_webgui_native, uri: 'https://github.com/smarc-project-native-gui/lolo_webgui_native.git', version: master}
 - git: {local-name: sam_webgui_native, uri: 'https://github.com/smarc-project-native-gui/sam_webgui_native.git', version: master}
-- git: {local-name: lolo_webgui, uri: 'https://github.com/smarc-project/smarc_base.git', version: noetic-devel}
-- git: {local-name: sam_webgui, uri: 'https://github.com/smarc-project/smarc_desktop.git', version: noetic-devel}
