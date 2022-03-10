@@ -9,6 +9,10 @@ ls
 mkdir bloom-release-debs
 while read repo_line; do
   repo=$(echo $repo_line | cut -c3-)
+  # only melodic needs a newer self-hosted geographic_info
+  if [ "$repo" == "geographic_info" ] && [ "$2" != "melodic" ]; then
+    continue
+  fi
   echo "Doing ${repo}"
   ls $repo
   pkgs_file="${repo}/release_packages.yaml"
