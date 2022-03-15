@@ -15,6 +15,12 @@ while read repo_line; do
   fi
   echo "Doing ${repo}"
   ls $repo
+  if [ "$repo" != "geographic_info" ] && [ "$repo" != "cola2_msgs" ]; then
+    cd $repo
+    # do not push version bumps until we know everything builds
+    catkin_prepare_release --bump patch -y --no-push
+    cd ..
+  fi
   pkgs_file="${repo}/release_packages.yaml"
   has_config=$(test -f "$pkgs_file" && echo true || echo false)
   if $has_config; then
@@ -52,3 +58,12 @@ done < $3
 zip -j bloom-${2}-release-deb.zip bloom-release-debs/*
 rm -rf bloom-release-debs
 ls
+# push version bumps
+while read repo_line; do
+  if [ "$repo" != "geographic_info" ] && [ "$repo" != "cola2_msgs" ]; then
+    echo "Pushing version bumps to ${pkg}"
+    cd $repo
+    git push
+    cd ..
+  fi
+done < $3
