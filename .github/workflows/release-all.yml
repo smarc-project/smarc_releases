@@ -46,6 +46,8 @@ jobs:
       - name: Build package
         shell: bash
         run: |
+          git config --global user.name "SMaRC Release Bot"
+          git config --global user.email "release-bot@smarc.se"
           scripts/release_repos.sh ${{ matrix.ubuntu }} ${{ matrix.distro }} release_repos.yaml
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
