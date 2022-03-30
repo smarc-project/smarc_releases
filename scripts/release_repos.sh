@@ -58,13 +58,15 @@ done < $3
 zip -j bloom-${2}-release-deb.zip bloom-release-debs/*
 rm -rf bloom-release-debs
 ls
-# push version bumps
-while read repo_line; do
-  repo=$(echo $repo_line | cut -c3-)
-  if [ "$repo" != "geographic_info" ] && [ "$repo" != "cola2_msgs" ]; then
-    echo "Pushing version bumps to ${pkg}"
-    cd $repo
-    git push
-    cd ..
-  fi
-done < $3
+# push version bumps, only on noetic!
+if [ "$2" == "noetic" ]; then
+  while read repo_line; do
+    repo=$(echo $repo_line | cut -c3-)
+    if [ "$repo" != "geographic_info" ] && [ "$repo" != "cola2_msgs" ]; then
+      echo "Pushing version bumps to ${pkg}"
+      cd $repo
+      git push
+      cd ..
+    fi
+  done < $3
+fi
