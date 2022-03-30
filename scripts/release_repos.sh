@@ -60,6 +60,7 @@ rm -rf bloom-release-debs
 ls
 # push version bumps
 while read repo_line; do
+  repo=$(echo $repo_line | cut -c3-)
   if [ "$repo" != "geographic_info" ] && [ "$repo" != "cola2_msgs" ]; then
     echo "Pushing version bumps to ${pkg}"
     cd $repo
