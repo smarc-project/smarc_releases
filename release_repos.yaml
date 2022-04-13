@@ -3,6 +3,7 @@
 - smarc_msgs
 - imc_ros_bridge
 - sam_common
+- uavcan_ros_bridge
 - lolo_common
 - smarc_navigation
 - smarc_utils
