@@ -2,6 +2,7 @@
 - git: {local-name: cola2_msgs, uri: 'https://bitbucket.org/iquarobotics/cola2_msgs.git', version: master}
 - git: {local-name: smarc_msgs, uri: 'git@github.com:smarc-project/smarc_msgs.git', version: noetic-devel}
 - git: {local-name: imc_ros_bridge, uri: 'git@github.com:smarc-project/imc_ros_bridge.git', version: noetic-devel}
+- git: {local-name: uavcan_ros_bridge, uri: 'git@github.com:smarc-project/uavcan_ros_bridge.git', version: noetic-devel}
 - git: {local-name: sam_common, uri: 'git@github.com:smarc-project/sam_common.git', version: noetic-devel}
 - git: {local-name: lolo_common, uri: 'git@github.com:smarc-project/lolo_common.git', version: noetic-devel}
 - git: {local-name: smarc_navigation, uri: 'git@github.com:smarc-project/smarc_navigation.git', version: noetic-devel}
