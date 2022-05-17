@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Example usage: ./release_repos.sh focal noetic release_repos.yaml
 # Example usage: ./release_repos.sh bionic melodic release_repos.yaml
