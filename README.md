@@ -1,4 +1,6 @@
 # smarc_releases
+![release](https://github.com/smarc-project/smarc_releases/workflows/release-deb/badge.svg) [![license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
 CD infrastructure for the SMaRC packages
 
 ### Package status
@@ -9,6 +11,7 @@ have a look at the [release instructions](https://github.com/smarc-project/rosin
 
 | Repository | Build Status | Release Status |
 | --- | --- | --- |
+| [smarc_releases](https://github.com/smarc-project/smarc_releases)  | - | ![release](https://github.com/smarc-project/smarc_releases/workflows/release-deb/badge.svg) |
 | [smarc_msgs](https://github.com/smarc-project/smarc_msgs) | ![CI](https://github.com/smarc-project/smarc_msgs/workflows/CI/badge.svg?branch=noetic-devel)  | ![release](https://github.com/smarc-project/smarc_msgs/workflows/release-CI/badge.svg) |
 | [lolo_common](https://github.com/smarc-project/lolo_common/blob/noetic-devel/release_packages.yaml)  | ![CI](https://github.com/smarc-project/lolo_common/workflows/CI/badge.svg?branch=noetic-devel)  | ![release](https://github.com/smarc-project/lolo_common/workflows/release-CI/badge.svg) |
 | [imc_ros_bridge](https://github.com/smarc-project/imc_ros_bridge)  | ![CI](https://github.com/smarc-project/imc_ros_bridge/workflows/CI/badge.svg?branch=noetic-devel)  | ![release](https://github.com/smarc-project/imc_ros_bridge/workflows/release-CI/badge.svg) |
