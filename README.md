@@ -57,7 +57,7 @@ Everything in the release process is automated. A new Github action will be crea
 If you click on the "Actions" panel for this repo (positioned above) you should be able to view the `release-deb`
 action triggered by the release creation.
 
-The action will try to make a release of all packages enumerated in the [release_repos.yaml](https://github.com/smarc-project/smarc_releases/blob/noetic-devel/release_repos.yaml) file as well as the [release_repos_gui.yaml](https://github.com/smarc-project/smarc_releases/blob/noetic-devel/release_repos_gui.yaml) file. It builds debian packages for each package, and bundles them in a zip file that gets presented in the releases interface when the action is done. If successful, it will also update the minor package version in the repos of all released packages.
+The action will try to make a release of all packages enumerated in the [release_repos.yaml](https://github.com/smarc-project/smarc_releases/blob/noetic-devel/release_repos.yaml) file as well as the [release_repos_gui.yaml](https://github.com/smarc-project/smarc_releases/blob/noetic-devel/release_repos_gui.yaml) file. It builds debian packages for each package, and bundles them in a zip file that gets presented in the releases interface when the action is done. If successful, it will also update the minor package version in the repos of all released packages using the [@smarcbot](https://github.com/smarcbot) user.
 
 ### Hosting a release
 
