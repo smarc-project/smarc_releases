@@ -63,6 +63,6 @@ The action will try to make a release of all packages enumerated in the [release
 
 1. Clone this repository: `git clone https://github.com/smarc-project/smarc_releases.git`
 2. Go to the scripts repo: `cd smarc_releases/scripts`
-3. Execute `./make_package_repository.sh` to create a apt package folder within the current folder containing the release packages from this repo
+3. Execute `./make_package_repository.sh` to create a apt package folder within the current folder containing the release packages from this repo (it downloads `bloom-noetic-wasm-release-deb.zip` and `bloom-melodic-wasm-release-deb.zip` from the latest release)
 4. Execute `./serve_package_repository.sh` to serve the package repository from your computer. This will typically be executed from the server at KTH
 5. Test that it works by following the install instructions
