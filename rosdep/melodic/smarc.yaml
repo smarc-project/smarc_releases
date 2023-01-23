@@ -118,3 +118,6 @@ sdl2_image:
 uavcan_ros_msgs:
   ubuntu: [ros-melodic-uavcan-ros-msgs]
   debian: [ros-melodic-uavcan-ros-msgs]
+mqtt_ros_bridge:
+  ubuntu: [ros-melodic-mqtt-ros-bridge]
+  debian: [ros-melodic-mqtt-ros-bridge]
