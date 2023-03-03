@@ -42,7 +42,7 @@ jobs:
           sudo curl https://raw.githubusercontent.com/smarc-project/rosinstall/master/rosdep/50-smarc-${{ matrix.distro }}.list -o /etc/ros/rosdep/sources.list.d/50-smarc.list  
           if [ ${{ matrix.distro }} == "melodic" ]; then
             sudo apt install -y python-bloom python-rosdep
-            pip2 install --user --no-input Inject==3.5.4
+            pip install --user --no-input Inject==3.5.4
           else
             sudo apt install -y python3-bloom python3-rosdep
           fi
