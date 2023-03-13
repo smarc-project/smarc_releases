@@ -19,4 +19,4 @@
 - git: {local-name: sam_webgui_native, uri: 'git@github.com:smarc-project-native-gui/sam_webgui_native.git', version: master}
 - git: {local-name: smarc_base, uri: 'git@github.com:smarc-project/smarc_base.git', version: noetic-devel}
 - git: {local-name: smarc_desktop, uri: 'git@github.com:smarc-project/smarc_desktop.git', version: noetic-devel}
-- git: {local-name: mqtt_ros_bridge, uri: 'git@github.com:smarc-project/mqtt_ros_bridge.git', version: noetic-devel}
+- git: {local-name: smarc_nodered, uri: 'git@github.com:smarc-project/smarc_nodered.git', version: noetic-devel}
