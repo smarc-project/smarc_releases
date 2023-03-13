@@ -7,8 +7,8 @@
 - lolo_common
 - smarc_navigation
 - smarc_utils
+- smarc_nodered
 - smarc_missions
 - smarc_controllers
 - stonefish_ros
 - smarc_stonefish_sims
-- smarc_nodered
