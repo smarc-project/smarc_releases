@@ -28,6 +28,9 @@ sam_action_servers:
 smarc_bt:
   ubuntu: [ros-melodic-smarc-bt]
   debian: [ros-melodic-smarc-bt]
+smarc_nodered:
+  ubuntu: [ros-melodic-smarc-nodered]
+  debian: [ros-melodic-smarc-nodered]
 bt_mission:
   ubuntu: [ros-melodic-bt-mission]
   debian: [ros-melodic-bt-mission]
@@ -118,6 +121,3 @@ sdl2_image:
 uavcan_ros_msgs:
   ubuntu: [ros-melodic-uavcan-ros-msgs]
   debian: [ros-melodic-uavcan-ros-msgs]
-smarc_nodered:
-  ubuntu: [ros-melodic-smarc-nodered]
-  debian: [ros-melodic-smarc-nodered]
