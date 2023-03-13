@@ -28,6 +28,9 @@ sam_action_servers:
 smarc_bt:
   ubuntu: [ros-noetic-smarc-bt]
   debian: [ros-noetic-smarc-bt]
+smarc_nodered:
+  ubuntu: [ros-noetic-smarc-nodered]
+  debian: [ros-noetic-smarc-nodered]
 bt_mission:
   ubuntu: [ros-noetic-bt-mission]
   debian: [ros-noetic-bt-mission]
@@ -118,6 +121,3 @@ sdl2_image:
 uavcan_ros_msgs:
   ubuntu: [ros-noetic-uavcan-ros-msgs]
   debian: [ros-noetic-uavcan-ros-msgs]
-smarc_nodered:
-  ubuntu: [ros-noetic-smarc-nodered]
-  debian: [ros-noetic-smarc-nodered]
