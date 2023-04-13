@@ -25,6 +25,9 @@ tf_convenience_topics:
 sam_action_servers:
   ubuntu: [ros-noetic-sam-action-servers]
   debian: [ros-noetic-sam-action-servers]
+lolo_action_servers:
+  ubuntu: [ros-noetic-lolo-action-servers]
+  debian: [ros-noetic-lolo-action-servers]
 smarc_bt:
   ubuntu: [ros-noetic-smarc-bt]
   debian: [ros-noetic-smarc-bt]
