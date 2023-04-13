@@ -13,7 +13,7 @@ while read repo_line; do
   if [ "$repo" == "geographic_info" ] && [ "$2" != "melodic" ]; then
     continue
   fi
-  echo "Doing ${repo}"
+  echo "--- Doing repo ${repo}"
   ls $repo
   if [ "$repo" != "geographic_info" ] && [ "$repo" != "cola2_msgs" ]; then
     cd $repo
@@ -24,7 +24,7 @@ while read repo_line; do
   pkgs_file="${repo}/release_packages.yaml"
   has_config=$(test -f "$pkgs_file" && echo true || echo false)
   if $has_config; then
-    echo "Found ${pkgs_file}"
+    echo "--- Found release_packages.yaml: ${pkgs_file}"
     pkgs=()
     while read line; do
       echo $line
@@ -32,12 +32,12 @@ while read repo_line; do
     done < $pkgs_file
     cd $repo
   else
-    echo "Did not find ${pkgs_file}"
+    echo "--- Did not find release_package.yaml: ${pkgs_file}"
     pkgs=("${repo}")
   fi
   echo ${pkgs[*]}
   for pkg in ${pkgs[*]}; do
-    echo "Doing ${pkg}"
+    echo "--- Doing package ${pkg}"
     cd $pkg
     ls
     rosdep install --from-path . --ignore-src --rosdistro $2 -y
@@ -63,7 +63,7 @@ if [ "$2" == "noetic" ]; then
   while read repo_line; do
     repo=$(echo $repo_line | cut -c3-)
     if [ "$repo" != "geographic_info" ] && [ "$repo" != "cola2_msgs" ]; then
-      echo "Pushing version bumps to ${pkg}"
+      echo "--- Pushing version bumps to ${pkg}"
       cd $repo
       git push
       cd ..
