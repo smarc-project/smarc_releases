@@ -34,9 +34,6 @@ smarc_bt:
 smarc_nodered:
   ubuntu: [ros-noetic-smarc-nodered]
   debian: [ros-noetic-smarc-nodered]
-bt_mission:
-  ubuntu: [ros-noetic-bt-mission]
-  debian: [ros-noetic-bt-mission]
 smarc_mission_sim:
   ubuntu: [ros-noetic-smarc-mission-sim]
   debian: [ros-noetic-smarc-mission-sim]

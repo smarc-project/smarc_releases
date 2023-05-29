@@ -34,9 +34,6 @@ smarc_bt:
 smarc_nodered:
   ubuntu: [ros-melodic-smarc-nodered]
   debian: [ros-melodic-smarc-nodered]
-bt_mission:
-  ubuntu: [ros-melodic-bt-mission]
-  debian: [ros-melodic-bt-mission]
 smarc_mission_sim:
   ubuntu: [ros-melodic-smarc-mission-sim]
   debian: [ros-melodic-smarc-mission-sim]
